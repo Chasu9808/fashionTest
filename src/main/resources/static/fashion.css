@@ -1,0 +1,124 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.user-menu a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.category-menu {
+    position: relative;
+    width: 48%; /* 여성의류와 남성의류를 양옆에 배치 */
+}
+
+.category-menu h2 {
+    margin-top: 0;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.category-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* 기본적으로 숨김 */
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 100%; /* 제목 아래로 표시 */
+    left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    z-index: 10;
+}
+
+.category-menu ul li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.category-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.category-menu:hover ul {
+    display: block; /* 마우스를 올렸을 때만 표시 */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    width: calc(25% - 20px);
+    background-color: #fff;
+}
+
+.product img {
+    display: block; /* 이미지를 블록으로 표시 */
+    width: 100%;    /* 부모 컨테이너의 너비를 채움 */
+    height: auto;   /* 이미지의 비율 유지 */
+}
+
+
+.product p {
+    margin: 10px;
+    font-size: 14px;
+}
