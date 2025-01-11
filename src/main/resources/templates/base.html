@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title layout:title="title">Clothing Store</title>
+  <link rel="stylesheet" href="/css/fashion.css">
+</head>
+
+<body>
+<div id="wrap" class="container-fluid">
+
+  <!-- Header -->
+  <header layout:fragment="header">
+    <div class="logo">fashion</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">BEST</a></li>
+        <li><a href="#">WOMEN</a></li>
+        <li><a href="#">MEN</a></li>
+      </ul>
+    </nav>
+    <div class="user-menu">
+      <a href="#">MY PAGE</a>
+      <a href="#">MY LIKE</a>
+      <a href="#">SHOPPING BAG</a>
+      <a href="#">LOGIN</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main layout:fragment="content">
+    <div class="main-content">
+      <!-- 여성의류 -->
+      <section class="category-menu">
+        <h2>여성의류</h2>
+        <ul>
+          <li>
+            <a href="#">봄</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">원피스</a></li>
+              <li><a href="#">스커트</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">여름</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">원피스</a></li>
+              <li><a href="#">스커트</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">가을</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">원피스</a></li>
+              <li><a href="#">스커트</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">겨울</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">원피스</a></li>
+              <li><a href="#">스커트</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">사계절용</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">원피스</a></li>
+              <li><a href="#">스커트</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 남성의류 -->
+      <section class="category-menu">
+        <h2>남성의류</h2>
+        <ul>
+          <li>
+            <a href="#">봄</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">여름</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">가을</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">겨울</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">사계절용</a>
+            <ul>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">EXCLUSIVE</a></li>
+              <li><a href="#">상의</a></li>
+              <li><a href="#">바지</a></li>
+              <li><a href="#">셋업</a></li>
+              <li><a href="#">점프수트</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer layout:fragment="footer" class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2025 패션 몰. 모든 권리 보유.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
