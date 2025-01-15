@@ -1,166 +1,156 @@
+/* 공통 스타일 */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fafafa;
-    color: #333;
-    line-height: 1.6;
 }
 
 .header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    padding: 20px 40px;
-    border-bottom: 2px solid #f0f0f0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
 
-.header .logo {
-    font-size: 28px;
+.logo {
+    flex: 1;
+    text-align: left; /* 로고를 왼쪽에 정렬 */
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 28px; /* 로고 크기 확대 */
     font-weight: bold;
     color: #333;
-    text-transform: uppercase;
 }
 
-.nav ul {
-    list-style: none;
+/* 네비게이션 */
+.nav {
+    flex: 2;
     display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
+    gap: 40px; /* 항목 간 간격 확대 */
 }
 
-.nav ul li {
-    margin-right: 30px;
+.nav-list > li {
+    position: relative; /* 서브메뉴 위치를 위해 필요 */
 }
 
-.nav ul li a {
+.nav-list > li > a {
     text-decoration: none;
-    color: #555;
+    color: #333; /* 더 진한 색상 */
+    font-size: 18px; /* 글자 크기 확대 */
     font-weight: bold;
-    font-size: 16px;
+    padding: 10px 20px; /* 간격 확대 */
     transition: color 0.3s ease;
 }
 
-.nav ul li a:hover {
+.nav-list > li > a:hover {
     color: #007bff;
 }
 
-.user-menu a {
-    margin-left: 20px;
+/* 서브메뉴 */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* 부모 메뉴 아래에 배치 */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin: 0;
+    display: none; /* 기본적으로 숨김 */
+    z-index: 999;
+}
+
+.submenu li {
+    padding: 10px 20px; /* 간격 조정 */
+}
+
+.submenu li a {
     text-decoration: none;
     color: #555;
-    font-size: 14px;
+    font-size: 16px; /* 서브메뉴 글자 크기 확대 */
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu li a:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* 서브메뉴 표시 (마우스 오버 시) */
+.nav-list > li:hover .submenu {
+    display: block; /* 부모 메뉴에 마우스를 올리면 표시 */
+}
+
+/* 사용자 메뉴 */
+.user-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px; /* 항목 간 간격 확대 */
+}
+
+.user-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; /* 글자 크기 확대 */
+    font-weight: bold;
     transition: color 0.3s ease;
+    padding: 10px 20px; /* 간격 확대 */
 }
 
 .user-menu a:hover {
     color: #007bff;
 }
 
-.main-content {
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 20px;
-    gap: 20px;
-}
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
 
-.category-menu {
-    position: relative;
-    width: 48%;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-}
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
 
-.category-menu h2 {
-    margin: 0;
-    background-color: #f9f9f9;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-}
-
-.category-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* 기본적으로 숨김 */
-    text-align: left;
-    background-color: #ffffff;
-}
-
-.category-menu ul li {
-    padding: 10px 15px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.category-menu ul li:last-child {
-    border-bottom: none;
-}
-
-.category-menu ul li a {
-    text-decoration: none;
-    color: #555;
-    font-size: 14px;
-    display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.category-menu ul li a:hover {
-    background-color: #f8f9fa;
-    color: #007bff;
-}
-
-.category-menu:hover ul {
-    display: block; /* 마우스를 올렸을 때 표시 */
-}
-
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-
-.product {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #ffffff;
-    width: calc(25% - 20px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.product p {
-    margin: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-.product p span {
-    display: block;
-    font-size: 14px;
-    color: #555;
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+    }
 }
