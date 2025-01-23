@@ -1,156 +1,128 @@
-/* 공통 스타일 */
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
+    box-sizing: border-box;
 }
 
-.header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
 }
 
+.container-fluid {
+    width: 100%;
+}
+
+/* Header */
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
+    background-color: #333;
+    padding: 15px 30px;
+    color: #fff;
+    max-width: 2000px;
+    margin: 0 auto; /* max-width와 결합하여 효과 적용 */
+    gap: 50px;
 }
 
-.logo {
-    flex: 1;
-    text-align: left; /* 로고를 왼쪽에 정렬 */
-}
-
+/* Logo */
 .logo a {
     text-decoration: none;
-    font-size: 28px; /* 로고 크기 확대 */
+    color: #fff;
+    font-size: 1rem; /* 다른 메뉴와 동일한 크기로 설정 */
     font-weight: bold;
-    color: #333;
+    margin-right: 30px; /* 로고와 메뉴 사이 간격 */
 }
 
-/* 네비게이션 */
+/* Navigation */
 .nav {
-    flex: 2;
-    display: flex;
-    justify-content: center;
+    flex-grow: 1; /* 로고 옆으로 메뉴 확장 */
 }
 
 .nav-list {
-    display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 40px; /* 항목 간 간격 확대 */
+    display: flex;
+    gap: 30px; /* 각 항목 간격 */
 }
 
 .nav-list > li {
-    position: relative; /* 서브메뉴 위치를 위해 필요 */
+    position: relative;
 }
 
 .nav-list > li > a {
     text-decoration: none;
-    color: #333; /* 더 진한 색상 */
-    font-size: 18px; /* 글자 크기 확대 */
-    font-weight: bold;
-    padding: 10px 20px; /* 간격 확대 */
-    transition: color 0.3s ease;
+    color: #fff;
+    padding: 10px 20px; /* 클릭 가능한 영역 확대 */
+    font-size: 1rem; /* 모든 항목 글씨 크기 동일 */
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
 .nav-list > li > a:hover {
-    color: #007bff;
+    background-color: #444;
+    border-radius: 5px;
 }
 
-/* 서브메뉴 */
+/* Submenu */
 .submenu {
     list-style: none;
     position: absolute;
-    top: 100%; /* 부모 메뉴 아래에 배치 */
+    top: 100%; /* 부모 메뉴 바로 아래에 위치 */
     left: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #444;
+    display: none;
     padding: 10px 0;
-    margin: 0;
-    display: none; /* 기본적으로 숨김 */
-    z-index: 999;
+    border-radius: 5px;
 }
 
 .submenu li {
-    padding: 10px 20px; /* 간격 조정 */
+    margin: 0;
 }
 
 .submenu li a {
     text-decoration: none;
-    color: #555;
-    font-size: 16px; /* 서브메뉴 글자 크기 확대 */
+    color: #fff;
+    padding: 10px 15px;
     display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
 .submenu li a:hover {
-    background-color: #f8f9fa;
-    color: #007bff;
+    background-color: #555;
 }
 
-/* 서브메뉴 표시 (마우스 오버 시) */
+/* Submenu display on hover */
 .nav-list > li:hover .submenu {
-    display: block; /* 부모 메뉴에 마우스를 올리면 표시 */
+    display: block;
 }
 
-/* 사용자 메뉴 */
+/* User Menu */
 .user-menu {
-    flex: 1;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px; /* 항목 간 간격 확대 */
+    gap: 30px; /* 각 사용자 메뉴 간격 */
 }
 
 .user-menu a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px; /* 글자 크기 확대 */
-    font-weight: bold;
+    color: #fff;
+    font-size: 1rem; /* 글자 크기 동일 */
     transition: color 0.3s ease;
-    padding: 10px 20px; /* 간격 확대 */
 }
 
 .user-menu a:hover {
-    color: #007bff;
+    color: #00bfff;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-    }
-
-    .nav-list.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-
-    .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: #333;
-    }
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
 }

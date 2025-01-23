@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" layout:decorate="base.html"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,6 +8,7 @@
   <link rel="stylesheet" href="/fashion.css">
 </head>
 <body>
+<div layout:fragment="content">
 <header>
   <h1>패션 몰</h1>
   <nav>
@@ -68,5 +71,6 @@
   <p>&copy; 2025 패션 몰. 모든 권리 보유.</p>
 </footer>
 <script src="/js/main.js"></script>
+</div>
 </body>
 </html>
