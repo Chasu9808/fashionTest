@@ -1,0 +1,128 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 30px;
+    color: #fff;
+    max-width: 2000px;
+    margin: 0 auto; /* max-width와 결합하여 효과 적용 */
+    gap: 50px;
+}
+
+/* Logo */
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem; /* 다른 메뉴와 동일한 크기로 설정 */
+    font-weight: bold;
+    margin-right: 30px; /* 로고와 메뉴 사이 간격 */
+}
+
+/* Navigation */
+.nav {
+    flex-grow: 1; /* 로고 옆으로 메뉴 확장 */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* 각 항목 간격 */
+}
+
+.nav-list > li {
+    position: relative;
+}
+
+.nav-list > li > a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px; /* 클릭 가능한 영역 확대 */
+    font-size: 1rem; /* 모든 항목 글씨 크기 동일 */
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list > li > a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Submenu */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* 부모 메뉴 바로 아래에 위치 */
+    left: 0;
+    background-color: #444;
+    display: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+/* Submenu display on hover */
+.nav-list > li:hover .submenu {
+    display: block;
+}
+
+/* User Menu */
+.user-menu {
+    display: flex;
+    gap: 30px; /* 각 사용자 메뉴 간격 */
+}
+
+.user-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem; /* 글자 크기 동일 */
+    transition: color 0.3s ease;
+}
+
+.user-menu a:hover {
+    color: #00bfff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
